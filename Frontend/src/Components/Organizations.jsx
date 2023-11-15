@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 const Organizations = () => {
-  return <div>Organizations</div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 };
 
 export default Organizations;

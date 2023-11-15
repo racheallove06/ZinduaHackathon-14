@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 import { FaBell } from "react-icons/fa";
 import logo from "../Assets/MKULIMA.jpg";
 import farm from "../Assets/farmwoman.jpeg";
@@ -19,19 +20,19 @@ const Navbar = () => {
         <div className="flex items-center">
           <img src={logo} className="mr-4 w-20 " />
           <ul className="hidden md:flex text-white">
-            <li>
-              <Link to="home" smooth={true} duration={500}>
+            <li className="hover:border-b border-[#f2910a] hover:text-[#f2910a] ">
+              <Link to="/" smooth={true} duration={500}>
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="market" smooth={true} offset={-200} duration={500}>
+            <li className="hover:border-b border-[#f2910a] hover:text-[#f2910a]">
+              <Link to="/market" smooth={true} offset={-200} duration={500}>
                 Market
               </Link>
             </li>
-            <li>
+            <li className="hover:border-b border-[#f2910a] hover:text-[#f2910a] ">
               <Link
-                to="organizations"
+                to="/organizations"
                 smooth={true}
                 offset={-50}
                 duration={500}
@@ -39,8 +40,8 @@ const Navbar = () => {
                 Organizations
               </Link>
             </li>
-            <li>
-              <Link to="about" smooth={true} offset={-100} duration={500}>
+            <li className="hover:border-b border-[#f2910a] hover:text-[#f2910a] ">
+              <Link to="/about" smooth={true} offset={-100} duration={500}>
                 About
               </Link>
             </li>

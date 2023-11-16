@@ -1,13 +1,12 @@
 import React from "react";
 import Navbar from "./Navbar";
-import banner from "../assets/home.jpeg";
-import farmers from "../assets/females.jpeg";
-import nuru from "../assets/nurulogo.png";
-import agro from "../assets/agrokenya.png";
-import acre from "../assets/logo.jpg";
+import farmers from "../assets/rectangle64.png";
+import nuru from "../assets/rectangle32.png";
+import agro from "../assets/rectangle321.png";
+import acre from "../assets/rectangle322.png";
 import Footer from "./Footer";
 import OrgNavbar from "./OrgNavbar";
-import backgroundImage from "../assets/tim.jpg";
+import backgroundImage from "../assets/rectangle63.png";
 const Organizations = () => {
   const appStyle = {
     backgroundImage: `url(${backgroundImage})`,
@@ -22,10 +21,10 @@ const Organizations = () => {
         <OrgNavbar />{" "}
       </div>
 
-      <div className=" flex bg-[#7dd87d]">
+      <div className=" flex bg-[#DFFBE2]  ">
         <div>
           {" "}
-          <h2 className="text-[30px] text-black text-right mt-20 font-bold mr-3">
+          <h2 className="text-[48px] text-[#A77A04] text-right mt-20 font-bold  mr-3">
             {" "}
             Empowering farmers on global markets{" "}
           </h2>{" "}

@@ -3,10 +3,10 @@ import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { FaBell } from "react-icons/fa";
 import logo from "../assets/MKULIMA.jpg";
-import farm from "../assets/farmwoman.jpeg";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { CgProfile } from "react-icons/cg";
 import { CiLogout } from "react-icons/ci";
+import profile from "../assets/pro.svg";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -58,7 +58,9 @@ const Navbar = () => {
           </button>
           <Link to="/profile">
             <div className="w-[52px] h-[52px] rounded-full bg-[white] flex justify-center items-center cursor-pointer mr-5">
-              <CgProfile className="w-[60%] h-[60%] object-contain" />
+              <img src={profile} />
+
+              {/* <CgProfile className="w-[60%] h-[60%] object-contain" /> */}
             </div>
           </Link>
           <div className="text-[#f2910a] mt-2">

@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar"; // Import your Navbar component
-import backgroundImage from "../assets/bg.jpg"; // Replace with the path to your image
+import backgroundImage from "../assets/rectangle54.png"; // Replace with the path to your image
 import AboutNav from "./AboutNav";
-import photo from "../assets/carrots.jpg";
+import photo from "../assets/rectangle55.png";
 import Footer from "./Footer";
 const About = () => {
   const appStyle = {
@@ -18,11 +18,11 @@ const About = () => {
         <AboutNav />
       </div>
       {/* Your app content goes here */}
-      <div className="flex align-center justify-center text-center mt-11">
+      <div className="flex align-center justify-center text-center mt-11 mb-4">
         <h3 className=" text-[45px] font-bold  mr-4">
           ABOUT
           <br /> THE SHAMBA <br />{" "}
-          <span className=" text-[#01352c]">EDUCATION </span>
+          <span className=" text-[#A77A04]">EDUCATION </span>
         </h3>
         <img src={photo} className="w-[500px]" />
       </div>

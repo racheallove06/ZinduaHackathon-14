@@ -18,9 +18,13 @@ import "./Carousel.module.css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Button } from "react-scroll";
 import Navbar1 from "./AboutNav";
+import { useNavigate } from "react-router";
 
 const Carousel = ({ type }) => {
-  const handleGetStarted = () => {};
+  const navigate = useNavigate();
+  const handleGetStarted = () => {
+    navigate("/signup");
+  };
   return (
     <div className={`h-[50.375rem] w-full z-10 `}>
       <>

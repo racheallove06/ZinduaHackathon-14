@@ -8,8 +8,8 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import KeyboardVoiceRoundedIcon from "@mui/icons-material/KeyboardVoiceRounded";
-import user1 from "../Assets/user1.jpg";
-import veggies from "../Assets/veggies.jpg";
+import user1 from "../assets/user1.jpg";
+import veggies from "../assets/veggies.jpg";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 

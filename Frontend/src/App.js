@@ -1,12 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
-import Footer from "./Components/Footer";
-import About from "./Components/About";
-import Organizations from "./Components/Organizations";
-import Courses from "./Components/Courses";
-import Market from "./Components/Market";
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import Footer from './components/Footer'
+import About from './components/About'
+import Organizations from './components/Organizations'
+import Courses from './components/Courses'
+import Market from './components/Market'
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/organizations" element={<Organizations />} />
       </Routes>
     </Router>
-  );
-};
+  )
+}
 
-export default App;
+export default App

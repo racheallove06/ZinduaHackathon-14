@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { FaBell } from "react-icons/fa";
-import logo from "../Assets/MKULIMA.jpg";
-import farm from "../Assets/farmwoman.jpeg";
+import logo from "../assets/MKULIMA.jpg";
+import farm from "../assets/farmwoman.jpeg";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { CgProfile } from "react-icons/cg";
 import { CiLogout } from "react-icons/ci";
@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className="w-screen h-[80px] z-10 bg-[#1B4821] fixed drop-shadow-lg ">
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
-          <img src={logo} className="mr-4 w-20 " />
+          <img src={logo} className="mr-4 w-20 " alt="shamba logo" />
           <ul className="hidden md:flex text-white">
             <li className="hover:border-b border-[#f2910a] hover:text-[#f2910a] ">
               <Link to="/" smooth={true} duration={500}>

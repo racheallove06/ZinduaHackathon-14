@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
-import banner from "../Assets/banner.png";
-import farmers from "../Assets/females.jpeg";
+import banner from "../assets/banner.png";
+import farmers from "../assets/females.jpeg";
 const Organizations = () => {
   return (
     <div>

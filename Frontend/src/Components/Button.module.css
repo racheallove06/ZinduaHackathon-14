@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.95475rem;
+  flex-shrink: 0;
+  border-radius: 0.94631rem;
+  z-index: -999;
+}
+.getstarted {
+  width: 12.375rem;
+  height: 4.0625rem;
+  padding: 0.95475rem;
+  background: #a77a04;
+  color: #fff;
+  font-size: 1.43213rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

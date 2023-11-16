@@ -8,10 +8,11 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import KeyboardVoiceRoundedIcon from "@mui/icons-material/KeyboardVoiceRounded";
-import user1 from "../Assets/user1.jpg";
-import veggies from "../Assets/veggies.jpg";
+import user1 from "../assets/user1.jpg";
+import veggies from "../assets/veggies.jpg";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Footer from "./Footer";
 
 const Market = () => {
   return (
@@ -75,9 +76,9 @@ const Market = () => {
             <div className="ml-[50px]">
               <img src={veggies} className="w-[650px]" />
               <div className="flex justify-between">
-                <p className="text-gray-600">Dm to place your order today </p>
-                <FavoriteIcon className="ml-[280px] text-gray-600" />
-                <ShoppingCartIcon className="mr-[200px] text-gray-600" />
+                <p className="text-gray-600">Place your order today </p>
+                <FavoriteIcon className="ml-[500px] text-gray-600" />
+                <ShoppingCartIcon className="mr-[200px] ml-6 text-gray-600" />
               </div>
             </div>
 
@@ -97,9 +98,9 @@ const Market = () => {
             <div className="ml-[50px]">
               <img src={veggies} className="w-[650px]" />
               <div className="flex justify-between">
-                <p className="text-gray-600">Dm to place your order today </p>
-                <FavoriteIcon className="ml-[280px] text-gray-600" />
-                <ShoppingCartIcon className="mr-[200px] text-gray-600" />
+                <p className="text-gray-600">Place your order today </p>
+                <FavoriteIcon className="ml-[500px] text-gray-600" />
+                <ShoppingCartIcon className="mr-[200px] ml-6 text-gray-600" />
               </div>
             </div>
 
@@ -119,9 +120,9 @@ const Market = () => {
             <div className="ml-[50px]">
               <img src={veggies} className="w-[650px]" />
               <div className="flex justify-between">
-                <p className="text-gray-600">Dm to place your order today </p>
-                <FavoriteIcon className="ml-[280px] text-gray-600" />
-                <ShoppingCartIcon className="mr-[200px] text-gray-600" />
+                <p className="text-gray-600">Place your order </p>
+                <FavoriteIcon className="ml-[500px] text-gray-600" />
+                <ShoppingCartIcon className="mr-[200px] ml-6 text-gray-600" />
               </div>
             </div>
           </div>

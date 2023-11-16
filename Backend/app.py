@@ -103,5 +103,10 @@ def decode_token(token):
     except jwt.InvalidTokenError:
         return 'Invalid token. Please log in again.'
     
+@app.route('/logout', methods=['DELETE'])
+def logout():
+    session.pop('farmer_id', None)
+    return jsonify({'message': 'Logged out successfully'}), 200
+    
 if __name__ == '__main__':
     app.run(debug=True)

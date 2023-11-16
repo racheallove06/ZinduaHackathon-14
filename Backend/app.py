@@ -1,7 +1,7 @@
 from config import app, db
 import bcrypt
 from flask import Flask, jsonify, make_response, request
-from models import User
+from models import User, Farmer
 import jwt;
 import os ;
 import base64;
@@ -45,6 +45,47 @@ def login():
         if bcrypt.checkpw(password.encode('utf-8'), user.password):
             expiration_time = datetime.utcnow() + timedelta(hours=400)
             token = jwt.encode({'user_id': user.id, 'exp': expiration_time}, secret_key, algorithm='HS256')
+
+            return jsonify({'message': 'Logged in successfully!', 'token': token}), 200
+        
+    return jsonify({'error': 'Invalid username/password!'}), 401
+
+@app.route('/farmer/register', methods=['POST'])
+def register_farmer():
+    data = request.get_json()
+    if request.method == 'POST':
+        existing_username = Farmer.query.filter(Farmer.username == data.get('username')).first()
+        existing_email = Farmer.query.filter(Farmer.username == data.get('email')).first()
+
+        if existing_username is None and existing_email is None:
+            hashpass = bcrypt.hashpw(data.get('password').encode('utf-8'), bcrypt.gensalt())
+            new_farmer = Farmer(
+                username=data.get('username'),
+                email=data.get('email'),
+                password=hashpass
+            )
+            db.session.add(new_farmer)
+            db.session.commit()
+            return jsonify({'message': 'Farmer created successfully'}), 201
+
+        return jsonify({'error': 'Username/Password already exists!'}), 403
+
+@app.route('/farmer/login', methods=['POST'])
+def login_farmer():
+    data = request.get_json()
+
+    email = data.get('email')
+    password = data.get('password')
+
+    if not email or not password:
+        return jsonify({'error': 'Input the required fields'}), 401
+
+    farmer = Farmer.query.filter(Farmer.email == email).first()
+
+    if farmer:
+        if bcrypt.checkpw(password.encode('utf-8'), farmer.password):
+            expiration_time = datetime.utcnow() + timedelta(hours=400)
+            token = jwt.encode({'user_id': farmer.id, 'exp': expiration_time}, secret_key, algorithm='HS256')
 
             return jsonify({'message': 'Logged in successfully!', 'token': token}), 200
         

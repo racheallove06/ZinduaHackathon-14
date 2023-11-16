@@ -1,7 +1,7 @@
 from config import app, db
 import bcrypt
 from flask import Flask, jsonify, make_response, request, session
-from models import User, Farmer
+from models import User, Farmer, Product
 import jwt;
 import os ;
 import base64;
@@ -107,6 +107,70 @@ def decode_token(token):
 def logout():
     session.pop('farmer_id', None)
     return jsonify({'message': 'Logged out successfully'}), 200
+
+@app.route('/products', methods=['GET', 'POST'])
+def products():
+    if request.method == 'GET':
+        product_list = []
+        products = Product.query.all()
+        for product in products:
+            farmer = Farmer.query.filter(Farmer.id == product.farmer_id).first()
+            product_dict = {
+                'id': product.id,
+                'image_url': product.image_url,
+                'location': product.location,
+                'quantity': product.quantity,
+                'farmer_id': product.farmer_id,
+                'farmer_name': farmer.username
+            }
+            product_list.append(product_dict)
+        response_body = product_list
+        response = make_response(jsonify(response_body), 200)
+        return response
+    
+    elif request.method == 'POST':
+        data = request.form
+        if data:
+            
+
+            if session.get('farmer_id'):
+                farmer = Farmer.query.filter(Farmer.id == session.get('farmer_id')).first()
+            else:
+                response_body = {"error": "Login as farmer to add product!"}
+                response = make_response(response_body)
+                return response
+
+            image_url = data.get('image_url')
+            location = data.get('location')
+            quantity = data.get('quantity')
+            farmer_id = farmer.id
+
+            new_product = Product(image_url=image_url, location=location, quantity=quantity, farmer_id=farmer_id)
+            db.session.add(new_product)
+            db.session.commit()
+            response_body = {"message": "Product created successfully!"}
+            response = make_response(response_body, 201)
+
+        else:
+            response_body = {"error": "Input data!"}
+            response = make_response(response_body)
+
+        return response
+    
+@app.route('/products/<int:id>', methods=['DELETE', 'PATCH'])
+def product_by_id(id):
+    product = Product.query.filter_by(id=id).first()
+    if product:
+        if request.method == "DELETE":
+            db.session.delete(product)
+            db.session.commit()
+            response_body = {"message": "Product deleted!"}
+            response = make_response(response_body, 200)
+            return response
+    else:
+        response_body = {"error": "Product not found"}
+        response = make_response(jsonify(response_body), 404)
+        return response
     
 if __name__ == '__main__':
     app.run(debug=True)

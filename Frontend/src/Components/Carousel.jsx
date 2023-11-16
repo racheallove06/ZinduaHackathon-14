@@ -1,25 +1,27 @@
 import React, { useRef, useState } from "react";
-// Import Swiper React components
-import slideImg1 from "../assets/images/slide1.png";
-import slideImg2 from "../assets/images/slide2.png";
-import slideImg3 from "../assets/images/slide3.png";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import user2 from "../assets/images/user2.png";
-
-// Import Swiper styles
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Button } from "react-scroll";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+//
+import slideImg1 from "../assets/images/slide1.png";
+import slideImg2 from "../assets/images/slide2.png";
+import slideImg3 from "../assets/images/slide3.png";
+import user2 from "../assets/images/user2.png";
 
 import "./Carousel.module.css";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Button } from "react-scroll";
+import Navbar1 from "./Navbar1";
+import { useNavigate } from "react-router-dom";
 
 const Carousel = ({ type }) => {
-  const handleGetStarted = () => {};
+  const navigate = useNavigate();
+  const handleGetStarted = () => {
+    navigate("/login");
+  };
   return (
     <div className={`h-[50.375rem] w-full z-10 `}>
       <>
@@ -77,7 +79,9 @@ const Carousel = ({ type }) => {
                   height: "100%",
                   backgroundColor: "rgba(0, 0, 0, 0.634)", // Adjust opacity here
                 }}
-              ></div>
+              >
+                <Navbar1 />
+              </div>
 
               {/* Content */}
               <h1>Cultivating Connections, Nurturing Growth</h1>
@@ -89,7 +93,9 @@ const Carousel = ({ type }) => {
                   height={50}
                   className="rounded-full"
                 />
-                <Button type="getstarted">Get Started</Button>
+                <Button type="getstarted" onClick={handleGetStarted}>
+                  Get Started
+                </Button>
                 <p>
                   “Since I started using this platform it has changed my farm
                   life”
@@ -123,7 +129,10 @@ const Carousel = ({ type }) => {
                   height: "100%",
                   backgroundColor: "rgba(0, 0, 0, 0.634)", // Adjust opacity here
                 }}
-              ></div>
+              >
+                {" "}
+                <Navbar1 />
+              </div>
 
               {/* Content */}
               <h1>Cultivating Connections, Nurturing Growth</h1>
@@ -135,7 +144,9 @@ const Carousel = ({ type }) => {
                   height={50}
                   className="rounded-full"
                 />
-                <Button type="getstarted">Get Started</Button>
+                <Button type="getstarted" onClick={handleGetStarted}>
+                  Get Started
+                </Button>
                 <p>
                   “Since I started using this platform it has changed my farm
                   life”
@@ -169,7 +180,9 @@ const Carousel = ({ type }) => {
                   height: "100%",
                   backgroundColor: "rgba(0, 0, 0, 0.634)", // Adjust opacity here
                 }}
-              ></div>
+              >
+                <Navbar1 />
+              </div>
 
               {/* Content */}
               <h1>Cultivating Connections, Nurturing Growth</h1>

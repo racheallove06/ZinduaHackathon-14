@@ -80,6 +80,50 @@ const Market = () => {
                 <ShoppingCartIcon className="mr-[200px] text-gray-600" />
               </div>
             </div>
+
+            <div className="flex ml-[50px] mt-6">
+              <div className=" w-[52px] h-[52px] rounded-full flex justify-center items-center cursor-pointer">
+                <img
+                  src={user1}
+                  className="object-contai rounded-full w-[80%] h-[80%] "
+                />
+              </div>
+              <div className="ml-5">
+                <p className="font-semibold text-gray-600"> Micheal. D</p>
+                <p className="ml-5 text-gray-400">Isiolo</p>
+              </div>
+            </div>
+
+            <div className="ml-[50px]">
+              <img src={veggies} className="w-[650px]" />
+              <div className="flex justify-between">
+                <p className="text-gray-600">Dm to place your order today </p>
+                <FavoriteIcon className="ml-[280px] text-gray-600" />
+                <ShoppingCartIcon className="mr-[200px] text-gray-600" />
+              </div>
+            </div>
+
+            <div className="flex ml-[50px] mt-6">
+              <div className=" w-[52px] h-[52px] rounded-full flex justify-center items-center cursor-pointer">
+                <img
+                  src={user1}
+                  className="object-contai rounded-full w-[80%] h-[80%] "
+                />
+              </div>
+              <div className="ml-5">
+                <p className="font-semibold text-gray-600"> Micheal. D</p>
+                <p className="ml-5 text-gray-400">Isiolo</p>
+              </div>
+            </div>
+
+            <div className="ml-[50px]">
+              <img src={veggies} className="w-[650px]" />
+              <div className="flex justify-between">
+                <p className="text-gray-600">Dm to place your order today </p>
+                <FavoriteIcon className="ml-[280px] text-gray-600" />
+                <ShoppingCartIcon className="mr-[200px] text-gray-600" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

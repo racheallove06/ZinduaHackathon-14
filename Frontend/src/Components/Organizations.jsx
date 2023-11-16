@@ -26,6 +26,8 @@ const Organizations = () => {
       </div>
 
       {/* organizations*/}
+
+      <div className="flex"></div>
     </div>
   );
 };

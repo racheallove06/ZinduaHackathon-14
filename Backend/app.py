@@ -1,6 +1,6 @@
 from config import app, db
 import bcrypt
-from flask import Flask, jsonify, make_response, request
+from flask import Flask, jsonify, make_response, request, session
 from models import User, Farmer
 import jwt;
 import os ;
@@ -86,6 +86,7 @@ def login_farmer():
         if bcrypt.checkpw(password.encode('utf-8'), farmer.password):
             expiration_time = datetime.utcnow() + timedelta(hours=400)
             token = jwt.encode({'user_id': farmer.id, 'exp': expiration_time}, secret_key, algorithm='HS256')
+            session['farmer_id'] = farmer.id
 
             return jsonify({'message': 'Logged in successfully!', 'token': token}), 200
         

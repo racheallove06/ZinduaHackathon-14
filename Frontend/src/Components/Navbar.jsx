@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { animateScroll as scroll } from "react-scroll";
+// import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { FaBell } from "react-icons/fa";
 import logo from "../assets/MKULIMA.jpg";
-import farm from "../assets/farmwoman.jpeg";
+// import farm from "../assets/farmwoman.jpeg";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { CgProfile } from "react-icons/cg";
 import { CiLogout } from "react-icons/ci";
@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className="w-screen h-[80px] z-10 bg-[#1B4821] fixed drop-shadow-lg ">
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
-          <img src={logo} className="mr-4 w-20 " />
+          <img src={logo} className="mr-4 w-20 " alt="shamba logo" />
           <ul className="hidden md:flex text-white">
             <li className="hover:border-b border-[#f2910a] hover:text-[#f2910a] ">
               <Link to="/" smooth={true} duration={500}>
@@ -109,18 +109,6 @@ const Navbar = () => {
             About
           </Link>
         </li>
-        {/* <li className="border-b-2 border-zinc-300 w-full">
-          <Link
-            onClick={handleClose}
-            to="pricing"
-            smooth={true}
-            offset={-50}
-            duration={500}
-          >
-            Pricing
-          </Link>
-  </li>*/}
-
         <div className="flex flex-col my-4">
           <button className="bg-transparent text-indigo-600 px-8 py-3 mb-4">
             Sign In

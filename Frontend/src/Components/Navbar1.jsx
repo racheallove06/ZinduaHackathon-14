@@ -3,12 +3,12 @@ import { Link } from "react-router-dom"; // Add this import
 import logo from "../assets/nobackground.png";
 const Navbar1 = () => {
   return (
-    <div className="w-screen h-[80px] z-1 fixed drop-shadow-lg  top-0 left-0 right-0 bg-opacity-75  p-4 text-white ">
+    <div className="w-screen h-[80px] z-1 fixed drop-shadow-lg  top-0 left-16 right-0 bg-opacity-75  p-4 text-white ">
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
           {/* Add your logo import statement and usage here */}
-          <img src={logo} className="mr-4 w-20" alt="Logo" />
-          <ul className="hidden md:flex text-white">
+          <img src={logo} className="mr-8 w-20 " alt="Logo" />
+          <ul className="hidden md:flex justify-center md:gap-20 text-white">
             <li className="hover:border-b border-[#f2910a] hover:text-[#f2910a]">
               <Link to="/" smooth={true} duration={500}>
                 Home

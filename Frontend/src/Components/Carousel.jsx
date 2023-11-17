@@ -1,26 +1,14 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Button } from "react-scroll";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-//
-import slideImg1 from "../assets/images/slide1.png";
-import slideImg2 from "../assets/images/slide2.png";
-import slideImg3 from "../assets/images/slide3.png";
-import user2 from "../assets/images/user2.png";
+
 
 import "./Carousel.module.css";
 
 // import required modules
-import Navbar1 from "./Navbar1";
-import { useNavigate } from "react-router-dom";
+
 
 const Carousel = ({ type }) => {
   const navigate = useNavigate();
   const handleGetStarted = () => {
-    navigate("/login");
+
   };
   return (
     <div className={`h-[50.375rem] w-full z-10 `}>
@@ -130,7 +118,7 @@ const Carousel = ({ type }) => {
                   backgroundColor: "rgba(0, 0, 0, 0.634)", // Adjust opacity here
                 }}
               >
-                {" "}
+
                 <Navbar1 />
               </div>
 

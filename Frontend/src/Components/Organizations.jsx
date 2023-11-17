@@ -6,13 +6,22 @@ import nuru from "../assets/nurulogo.png";
 import agro from "../assets/agrokenya.png";
 import acre from "../assets/logo.jpg";
 import Footer from "./Footer";
+import OrgNavbar from "./OrgNavbar";
+import backgroundImage from "../assets/tim.jpg";
 const Organizations = () => {
+  const appStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "100vh", // Set minimum height to cover the entire viewport
+  };
   return (
     <div>
-      <Navbar />
-      <div className=" ">
-        <img src={banner} alt="Banner" className="w-full" />
+      <div style={appStyle}>
+        {" "}
+        <OrgNavbar />{" "}
       </div>
+
       <div className=" flex bg-[#7dd87d]">
         <div>
           {" "}

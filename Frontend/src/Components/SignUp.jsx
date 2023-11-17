@@ -2,7 +2,6 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import logo from "../assets/mkulima1.jpg";
 
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
@@ -12,16 +11,11 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import loginImage from "../assets/images/login.png";
 
+
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+
   };
 
   return (
@@ -54,7 +48,6 @@ export default function SignUp() {
               alignItems: "center",
             }}
           >
-            <img src={logo} alt="shamba logo" className="w-20 h-30" />
 
             <Typography component="h1" variant="h5">
               Sign up
@@ -108,6 +101,7 @@ export default function SignUp() {
                     autoComplete="new-password"
                   />
                 </Grid>
+
               </Grid>
               <Button
                 type="submit"
@@ -120,7 +114,7 @@ export default function SignUp() {
               <Grid container justifyContent="flex-end">
                 <Grid item>
                   <Link href="/login" variant="body2">
-                    Already have an account? LogIn
+
                   </Link>
                 </Grid>
               </Grid>

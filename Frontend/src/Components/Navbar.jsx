@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { animateScroll as scroll } from "react-scroll";
+// import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { FaBell } from "react-icons/fa";
 import logo from "../assets/MKULIMA.jpg";
-import farm from "../assets/farmwoman.jpeg";
+// import farm from "../assets/farmwoman.jpeg";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { CgProfile } from "react-icons/cg";
 import { CiLogout } from "react-icons/ci";
@@ -109,18 +109,6 @@ const Navbar = () => {
             About
           </Link>
         </li>
-        {/* <li className="border-b-2 border-zinc-300 w-full">
-          <Link
-            onClick={handleClose}
-            to="pricing"
-            smooth={true}
-            offset={-50}
-            duration={500}
-          >
-            Pricing
-          </Link>
-  </li>*/}
-
         <div className="flex flex-col my-4">
           <button className="bg-transparent text-indigo-600 px-8 py-3 mb-4">
             Sign In

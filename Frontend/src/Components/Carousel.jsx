@@ -1,29 +1,14 @@
-// import React, { useRef, useState } from "react";
-// Import Swiper React components
-import slideImg1 from "../assets/images/slide1.png";
-import slideImg2 from "../assets/images/slide2.png";
-import slideImg3 from "../assets/images/slide3.png";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import user2 from "../assets/images/user2.png";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 import "./Carousel.module.css";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Button } from "react-scroll";
-import Navbar1 from "./AboutNav";
-import { useNavigate } from "react-router";
+
 
 const Carousel = ({ type }) => {
   const navigate = useNavigate();
   const handleGetStarted = () => {
-    navigate("/signup");
+
   };
   return (
     <div className={`h-[50.375rem] w-full z-10 `}>
@@ -133,6 +118,7 @@ const Carousel = ({ type }) => {
                   backgroundColor: "rgba(0, 0, 0, 0.634)", // Adjust opacity here
                 }}
               >
+
                 <Navbar1 />
               </div>
 

@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import farmers from "../assets/rectangle64.png";
 import nuru from "../assets/rectangle32.png";
 import agro from "../assets/rectangle321.png";
 import acre from "../assets/rectangle322.png";
-import Footer from "./Footer";
-import OrgNavbar from "./OrgNavbar";
+import Footer from "../components/Footer";
+import OrgNavbar from "../components/OrgNavbar";
 import backgroundImage from "../assets/rectangle63.png";
 const Organizations = () => {
   const appStyle = {

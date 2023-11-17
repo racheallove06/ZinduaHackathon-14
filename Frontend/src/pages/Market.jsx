@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import SideBar from "./Chat";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
@@ -14,7 +14,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import carrots from "../assets/carrots.jpg";
 import user2 from "../assets/pro71.svg";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 const Market = () => {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./Navbar"; // Import your Navbar component
+import Navbar from "../components/Navbar"; // Import your Navbar component
 import backgroundImage from "../assets/rectangle54.png"; // Replace with the path to your image
-import AboutNav from "./AboutNav";
+import AboutNav from "../components/AboutNav";
 import photo from "../assets/rectangle55.png";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 const About = () => {
   const appStyle = {
     backgroundImage: `url(${backgroundImage})`,

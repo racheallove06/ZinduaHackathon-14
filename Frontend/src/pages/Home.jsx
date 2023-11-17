@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
+import Carousel from "../components/Carousel";
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
-      <h2>Hey</h2>
+      <Carousel />
     </div>
   );
 };

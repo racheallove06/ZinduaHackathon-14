@@ -1,23 +1,21 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import Organizations from "./components/Organizations";
-import Courses from "./components/Courses";
-import Market from "./components/Market";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+import Organizations from "./pages/Organizations";
+import Courses from "./pages/Courses";
+import Market from "./pages/Market";
+import Home from "./pages/Home";
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" index element={<Home />} />
         <Route path="/market" element={<Market />} />
         <Route path="/organizations" element={<Organizations />} />
         <Route path="/about" element={<About />} />
+        <Route path="/courses" element={<Courses />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 

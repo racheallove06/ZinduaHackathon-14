@@ -1,23 +1,38 @@
 import * as React from "react";
+<<<<<<< HEAD
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+=======
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+
+>>>>>>> origin/main
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+<<<<<<< HEAD
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import loginImage from "../assets/images/login.png";
 import logo from "../assets/mkulima1.jpg";
+=======
+import Typography from "@mui/material/Typography";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import loginImage from "../assets/images/login.png";
+
+>>>>>>> origin/main
 
 const theme = createTheme();
 
 export default function SignUp() {
+<<<<<<< HEAD
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -25,6 +40,9 @@ export default function SignUp() {
       email: data.get("email"),
       password: data.get("password"),
     });
+=======
+
+>>>>>>> origin/main
   };
 
   return (
@@ -57,7 +75,11 @@ export default function SignUp() {
               alignItems: "center",
             }}
           >
+<<<<<<< HEAD
             <img src={logo} alt="Shamba education logo" className="w-20" />
+=======
+
+>>>>>>> origin/main
             <Typography component="h1" variant="h5">
               Sign up
             </Typography>
@@ -110,6 +132,7 @@ export default function SignUp() {
                     autoComplete="new-password"
                   />
                 </Grid>
+<<<<<<< HEAD
                 <Grid item xs={12}>
                   <FormControlLabel
                     control={
@@ -118,6 +141,9 @@ export default function SignUp() {
                     label="I want to receive inspiration, marketing promotions and updates via email."
                   />
                 </Grid>
+=======
+
+>>>>>>> origin/main
               </Grid>
               <Button
                 type="submit"
@@ -130,7 +156,11 @@ export default function SignUp() {
               <Grid container justifyContent="flex-end">
                 <Grid item>
                   <Link href="/login" variant="body2">
+<<<<<<< HEAD
                     Already have an account? Log in
+=======
+
+>>>>>>> origin/main
                   </Link>
                 </Grid>
               </Grid>

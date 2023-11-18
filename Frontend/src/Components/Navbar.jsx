@@ -16,7 +16,7 @@ const Navbar = () => {
   const handleClose = () => setNav(!nav);
 
   return (
-    <div className="w-screen h-[80px] z-10 bg-[#1B4821] fixed drop-shadow-lg ">
+    <div className="w-screen h-[80px] z-10 bg-[#1B4821] drop-shadow-lg ">
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
           <img src={logo} className="mr-4 w-20 " alt="shamba logo" />

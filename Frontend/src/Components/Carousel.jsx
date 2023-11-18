@@ -11,19 +11,27 @@ import user2 from "../assets/images/user2.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/effect-fade";
 
 import "./Carousel.module.css";
 
 // import required modules
+<<<<<<< HEAD
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Button } from "react-scroll";
+=======
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+>>>>>>> newfiles
 import Navbar1 from "./AboutNav";
 import { useNavigate } from "react-router";
+import Button from "./Button";
 
 const Carousel = ({ type }) => {
   const navigate = useNavigate();
-  const handleGetStarted = () => {};
+  const handleGetStarted = () => {
+    navigate('/signup')
+  };
   return (
     <div className={`h-[50.375rem] w-full z-10 `}>
       <>
@@ -45,6 +53,7 @@ const Carousel = ({ type }) => {
           }}
           spaceBetween={30}
           centeredSlides={true}
+          effect={"fade"}
           autoplay={{
             delay: 3000,
             disableOnInteraction: true,
@@ -79,30 +88,37 @@ const Carousel = ({ type }) => {
                   left: 0,
                   width: "100%",
                   height: "100%",
-                  backgroundColor: "rgba(0, 0, 0, 0.634)", // Adjust opacity here
+                  backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust opacity here
                 }}
               >
                 <Navbar1 />
               </div>
 
               {/* Content */}
-              <h1>Cultivating Connections, Nurturing Growth</h1>
-              <div className="z-50">
-                <img
-                  src={user2}
-                  alt="user two profile"
-                  width={50}
-                  height={50}
-                  className="rounded-full"
-                />
-                <Button type="getstarted" onClick={handleGetStarted}>
+              <h1 className="-ml-[40%] mt-60">
+                Cultivating Connections, <br></br> Nurturing Growth
+              </h1>
+              <div className="z-50 flex flex-col gap-10">
+                <Button type="start" onClick={handleGetStarted}>
                   Get Started
                 </Button>
-                <p>
-                  “Since I started using this platform it has changed my farm
-                  life”
-                </p>
-                <p>Tabitha - Livestock farmer Turkana</p>
+                <div className="ml-[40rem] mt-24">
+                  <img
+                    src={user2}
+                    alt="user two profile"
+                    width={50}
+                    height={50}
+                    className="rounded-full"
+                  />
+
+                  <div>
+                    <p>
+                      “Since I started using this platform it has changed my
+                      farm life”
+                    </p>
+                    <p>Tabitha - Livestock farmer Turkana</p>
+                  </div>
+                </div>
               </div>
             </div>
           </SwiperSlide>
@@ -129,30 +145,37 @@ const Carousel = ({ type }) => {
                   left: 0,
                   width: "100%",
                   height: "100%",
-                  backgroundColor: "rgba(0, 0, 0, 0.634)", // Adjust opacity here
+                  backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust opacity here
                 }}
               >
                 <Navbar1 />
               </div>
 
               {/* Content */}
-              <h1>Cultivating Connections, Nurturing Growth</h1>
-              <div className="z-50">
-                <img
-                  src={user2}
-                  alt="user two profile"
-                  width={50}
-                  height={50}
-                  className="rounded-full"
-                />
-                <Button type="getstarted" onClick={handleGetStarted}>
+              <h1 className="-ml-[40%] mt-60">
+                Cultivating Connections, <br></br> Nurturing Growth
+              </h1>
+              <div className="z-50 flex flex-col gap-10">
+                <Button type="start" onClick={handleGetStarted}>
                   Get Started
                 </Button>
-                <p>
-                  “Since I started using this platform it has changed my farm
-                  life”
-                </p>
-                <p>Tabitha - Livestock farmer Turkana</p>
+                <div className="ml-[40rem] mt-24">
+                  <img
+                    src={user2}
+                    alt="user two profile"
+                    width={50}
+                    height={50}
+                    className="rounded-full"
+                  />
+
+                  <div>
+                    <p>
+                      “Since I started using this platform it has changed my
+                      farm life”
+                    </p>
+                    <p>Tabitha - Livestock farmer Turkana</p>
+                  </div>
+                </div>
               </div>
             </div>
           </SwiperSlide>
@@ -179,30 +202,37 @@ const Carousel = ({ type }) => {
                   left: 0,
                   width: "100%",
                   height: "100%",
-                  backgroundColor: "rgba(0, 0, 0, 0.634)", // Adjust opacity here
+                  backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust opacity here
                 }}
               >
                 <Navbar1 />
               </div>
 
               {/* Content */}
-              <h1>Cultivating Connections, Nurturing Growth</h1>
-              <Button onClick={handleGetStarted} type="getstarted">
-                Get Started
-              </Button>
-              <div className="z-50 ">
-                <img
-                  src={user2}
-                  alt="user two profile"
-                  width={50}
-                  height={50}
-                  className="rounded-full"
-                />
-                <p>
-                  “Since I started using this platform it has changed my farm
-                  life”
-                </p>
-                <p>Tabitha - Livestock farmer Turkana</p>
+              <h1 className="-ml-[40%] mt-60">
+                Cultivating Connections, <br></br> Nurturing Growth
+              </h1>
+              <div className="z-50 flex flex-col gap-10">
+                <Button type="start" onClick={handleGetStarted}>
+                  Get Started
+                </Button>
+                <div className="ml-[40rem]   mt-24">
+                  <img
+                    src={user2}
+                    alt="user two profile"
+                    width={50}
+                    height={50}
+                    className="rounded-full"
+                  />
+
+                  <div>
+                    <p>
+                      “Since I started using this platform it has changed my
+                      farm life”
+                    </p>
+                    <p>Tabitha - Livestock farmer Turkana</p>
+                  </div>
+                </div>
               </div>
             </div>
           </SwiperSlide>

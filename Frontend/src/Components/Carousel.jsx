@@ -21,7 +21,7 @@ import "./Carousel.module.css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Button } from "react-scroll";
 =======
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 >>>>>>> newfiles
 import Navbar1 from "./AboutNav";
 import { useNavigate } from "react-router";
@@ -29,9 +29,7 @@ import Button from "./Button";
 
 const Carousel = ({ type }) => {
   const navigate = useNavigate();
-  const handleGetStarted = () => {
-    navigate('/signup')
-  };
+  const handleGetStarted = () => {};
   return (
     <div className={`h-[50.375rem] w-full z-10 `}>
       <>
@@ -62,7 +60,7 @@ const Carousel = ({ type }) => {
             clickable: true,
           }}
           navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Autoplay, EffectFade, Pagination, Navigation]}
           className="swiper"
         >
           <SwiperSlide>

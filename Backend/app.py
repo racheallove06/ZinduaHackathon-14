@@ -9,6 +9,22 @@ from datetime import datetime, timedelta;
 
 secret_key = base64.b64encode(os.urandom(24)).decode('utf-8')
 
+@app.route("/users")
+def get_users():
+    users_list = []
+    users = User.query.all()
+    for user in users:
+        user_dict = {
+            "username": user.username,
+            "email": user.email
+        }
+        users_list.append(user_dict)
+
+    response_body = users_list
+    response = make_response(jsonify(response_body), 200)
+
+    return response
+
 @app.route('/register', methods=['POST'])
 def register():
     data = request.get_json()

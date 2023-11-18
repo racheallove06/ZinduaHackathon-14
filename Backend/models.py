@@ -75,3 +75,4 @@ class Product(db.Model, SerializerMixin):
             'quantity': self.quantity,
             'farmer_id': self.farmer_id
         }
+    

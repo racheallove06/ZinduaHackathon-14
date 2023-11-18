@@ -1,11 +1,10 @@
-import React from 'react'
-
-import About from './components/About'
-import Organizations from './components/Organizations'
-import Courses from './components/Courses'
-import Market from './components/Market'
-
-
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+import Organizations from "./pages/Organizations";
+import Courses from "./pages/Courses";
+import Market from "./pages/Market";
+import Home from "./pages/Home";
 const App = () => {
   return (
     <BrowserRouter>
@@ -14,8 +13,10 @@ const App = () => {
         <Route path="/market" element={<Market />} />
         <Route path="/organizations" element={<Organizations />} />
         <Route path="/about" element={<About />} />
+        <Route path="/courses" element={<Courses />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-  )
-}
-
-export default App
+export default App;

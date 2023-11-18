@@ -1,5 +1,5 @@
 import React from "react";
-import user from "../assets/user1.jpg";
+import user from "../assets/pro7.svg";
 const Message = () => {
   return (
     <div className={`chat-bubble`}>

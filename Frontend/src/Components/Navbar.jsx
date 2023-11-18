@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-// import { animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { FaBell } from "react-icons/fa";
 import logo from "../assets/MKULIMA.jpg";
-// import farm from "../assets/farmwoman.jpeg";
+
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { CgProfile } from "react-icons/cg";
 import { CiLogout } from "react-icons/ci";
+import profile from "../assets/pro.svg";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
           <img src={logo} className="mr-4 w-20 " alt="shamba logo" />
-          <ul className="hidden md:flex text-white">
+          <ul className="hidden md:flex text-white space-x-9">
             <li className="hover:border-b border-[#f2910a] hover:text-[#f2910a] ">
               <Link to="/" smooth={true} duration={500}>
                 Home
@@ -58,7 +59,9 @@ const Navbar = () => {
           </button>
           <Link to="/profile">
             <div className="w-[52px] h-[52px] rounded-full bg-[white] flex justify-center items-center cursor-pointer mr-5">
-              <CgProfile className="w-[60%] h-[60%] object-contain" />
+              <img src={profile} />
+
+              {/* <CgProfile className="w-[60%] h-[60%] object-contain" /> */}
             </div>
           </Link>
           <div className="text-[#f2910a] mt-2">

@@ -8,7 +8,7 @@ const Navbar1 = () => {
         <div className="flex items-center">
           {/* Add your logo import statement and usage here */}
           <img src={logo} className="mr-4 w-20" alt="Logo" />
-          <ul className="hidden md:flex text-white">
+          <ul className="hidden md:flex text-white space-x-9">
             <li className="hover:border-b border-[#f2910a] hover:text-[#f2910a]">
               <Link to="/" smooth={true} duration={500}>
                 Home

@@ -7,14 +7,29 @@
   border-radius: 0.94631rem;
   z-index: -999;
 }
-.getstarted {
+.start {
   width: 12.375rem;
   height: 4.0625rem;
   padding: 0.95475rem;
+  margin-left: 10%;
+  margin-top: 10%;
   background: #a77a04;
   color: #fff;
   font-size: 1.43213rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+.resume {
+  display: flex;
+  width: 8.1875rem;
+  height: 3.1875rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background: #1b4821;
+  color: #fff;
 }

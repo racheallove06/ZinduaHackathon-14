@@ -5,10 +5,11 @@ import Home from './components/Home'
 // import Footer from './components/Footer'
 import About from './components/About'
 import Organizations from './components/Organizations'
-import Courses from './components/Courses'
 import Market from './components/Market'
 import SignUp from './components/SignUp'
 import LogIn from './components/Login'
+import CoursesHome from './components/CoursesHome'
+import AnimalFarming from './components/AnimalFarming'
 
 const App = () => {
   return (
@@ -20,7 +21,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses" element={<CoursesHome />} />
+        <Route path="/animalfarming" element={<AnimalFarming />} />
         {/* <Route path="*" element={<PageNotFound />} /> */}
       </Routes>
     </BrowserRouter>

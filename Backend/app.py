@@ -157,10 +157,13 @@ def products():
 
         return response
     
-@app.route('/products/<int:id>', methods=['DELETE', 'PATCH'])
+@app.route('/products/<int:id>', methods=['GET', 'DELETE', 'PATCH'])
 def product_by_id(id):
     product = Product.query.filter_by(id=id).first()
     if product:
+        if request.method == 'GET':
+            return jsonify(product.serialize())
+        
         if request.method == "DELETE":
             db.session.delete(product)
             db.session.commit()

@@ -83,7 +83,8 @@ def login_farmer():
     farmer = Farmer.query.filter(Farmer.email == email).first()
 
     if farmer:
-        if bcrypt.checkpw(password.encode('utf-8'), farmer.password):
+        hash_pass = bcrypt.hashpw(data.get('password').encode('utf-8'), bcrypt.gensalt())
+        if bcrypt.checkpw(hash_pass, farmer.password):
             expiration_time = datetime.utcnow() + timedelta(hours=400)
             token = jwt.encode({'user_id': farmer.id, 'exp': expiration_time}, secret_key, algorithm='HS256')
             session['farmer_id'] = farmer.id

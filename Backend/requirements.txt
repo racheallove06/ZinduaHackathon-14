@@ -21,3 +21,5 @@ sqlalchemy==2.0.23; python_version >= '3.7'
 sqlalchemy-serializer==1.4.1
 typing-extensions==4.8.0; python_version >= '3.8'
 werkzeug==3.0.1; python_version >= '3.8'
+bcrypt==3.2.0
+PyJWT==2.2.0
